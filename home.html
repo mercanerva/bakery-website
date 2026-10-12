@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Butter & Bloom Bakery - Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <!-- background audio -->
+    <audio id="bakeryMusic" loop>
+        <source src="../gallery/bakery-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- header & navigation -->
+    <header class="navbar">
+        <a href="../home/home.html" class="logo">
+            <!-- SVG Logo -->
+            <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="45" fill="#C86D51" />
+                <text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="'Playfair Display', serif" font-size="38" font-weight="bold" fill="#FDFBF7">BB</text>
+            </svg>
+            Butter & Bloom Bakery
+        </a>
+        <nav>
+            <ul>
+                <li><a href="../home/home.html">Home</a></li>
+                <li><a href="../menu/menu.html">Menu</a></li>
+                <li><a href="../aboutus/aboutus.html">About Us</a></li>
+                <li><a href="../contact/contact.html">Contact</a></li>
+                <li><a href="../myreport/myreport.html">My Report</a></li>
+            </ul>
+        </nav>
+        <button class="music-btn" onclick="toggleMusic()">🎵 Play Music</button>
+    </header>
+
+    <!-- hero section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Freshly Baked Goods Every Day</h1>
+            <p>Sourdough bread, pastries, and artisanal coffee baked with love.</p>
+            <a href="../menu/menu.html" class="btn-primary">Explore Menu</a>
+        </div>
+        <div class="hero-image">
+            <video controls playsinline>
+                <source src="../gallery/bakery-video.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer></footer>
+
+    <!-- audio toggle script -->
+    <script>
+        function toggleMusic() {
+            var music = document.getElementById("bakeryMusic");
+            var btn = document.querySelector(".music-btn");
+            if (music.paused) { 
+                music.play(); 
+                btn.innerHTML = "⏸️ Pause Music"; 
+            } else { 
+                music.pause(); 
+                btn.innerHTML = "🎵 Play Music"; 
+            }
+        }
+    </script>
+</body>
+</html>

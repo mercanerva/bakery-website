@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Butter & Bloom Bakery - Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <!-- background audio -->
+    <audio id="bakeryMusic" loop>
+        <source src="../gallery/bakery-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- header & navigation -->
+    <header class="navbar">
+        <a href="../home/home.html" class="logo">
+            <!-- SVG Logo -->
+            <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="45" fill="#C86D51" />
+                <text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="'Playfair Display', serif" font-size="38" font-weight="bold" fill="#FDFBF7">BB</text>
+            </svg>
+            Butter & Bloom Bakery
+        </a>
+        <nav>
+            <ul>
+                <li><a href="../home/home.html">Home</a></li>
+                <li><a href="../menu/menu.html">Menu</a></li>
+                <li><a href="../aboutus/aboutus.html">About Us</a></li>
+                <li><a href="../contact/contact.html">Contact</a></li>
+                <li><a href="../myreport/myreport.html">My Report</a></li>
+            </ul>
+        </nav>
+        <button class="music-btn" onclick="toggleMusic()">🎵 Play Music</button>
+    </header>
+
+    <!-- menu section (daily specials) -->
+    <section class="specials">
+        <h1>Our Daily Specials</h1>
+        <div class="card-grid">
+            <div class="card">
+                <img src="../gallery/sourdough.jpg" alt="Fresh Sourdough">
+                <h2>Fresh Sourdough</h2>
+                <p>Sourdough bread baked fresh daily. 100% Organic!</p>
+                <span class="price">€3.50</span>
+            </div>
+            <div class="card">
+                <img src="../gallery/croissant.jpg" alt="French Croissant">
+                <h2>French Croissant</h2>
+                <p>Buttery, golden, and flaky croissants.</p>
+                <span class="price">€2.80</span>
+            </div>
+            <div class="card">
+                <img src="../gallery/cake.jpg" alt="Custom Cakes">
+                <h2>Custom Cakes</h2>
+                <p>Elegant cakes for your special and memorable moments.</p>
+                <span class="price">€25.00</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- gallery section of our bakery -->
+    <section class="gallery">
+        <h2>Our Bakery Gallery</h2>
+        <p class="subtitle">Discover our fresh pastries and warmth behind our counter!</p>
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="../gallery/gallery-1.jpeg" alt="Baking process"></div>
+            <div class="gallery-item"><img src="../gallery/gallery-2.jpeg" alt="Cozy cafe seating"></div>
+            <div class="gallery-item"><img src="../gallery/gallery-3.jpeg" alt="Coffee and pastry"></div>
+            <div class="gallery-item"><img src="../gallery/gallery-4.jpeg" alt="Fresh loaves on shelf"></div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer></footer>
+
+    <!-- audio toggle script -->
+    <script>
+        function toggleMusic() {
+            var music = document.getElementById("bakeryMusic");
+            var btn = document.querySelector(".music-btn");
+            if (music.paused) { 
+                music.play(); 
+                btn.innerHTML = "⏸️ Pause Music"; 
+            } else { 
+                music.pause(); 
+                btn.innerHTML = "🎵 Play Music"; 
+            }
+        }
+    </script>
+</body>
+</html>

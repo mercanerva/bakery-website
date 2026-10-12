@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Butter & Bloom Bakery - Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <!-- background audio -->
+    <audio id="bakeryMusic" loop>
+        <source src="../gallery/bakery-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- header & navigation -->
+    <header class="navbar">
+        <a href="../home/home.html" class="logo">
+            <!-- SVG Logo -->
+            <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="45" fill="#C86D51" />
+                <text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="'Playfair Display', serif" font-size="38" font-weight="bold" fill="#FDFBF7">BB</text>
+            </svg>
+            Butter & Bloom Bakery
+        </a>
+        <nav>
+            <ul>
+                <li><a href="../home/home.html">Home</a></li>
+                <li><a href="../menu/menu.html">Menu</a></li>
+                <li><a href="../aboutus/aboutus.html">About Us</a></li>
+                <li><a href="../contact/contact.html">Contact</a></li>
+                <li><a href="../myreport/myreport.html">My Report</a></li>
+            </ul>
+        </nav>
+        <button class="music-btn" onclick="toggleMusic()">🎵 Play Music</button>
+    </header>
+
+    <!-- contact section -->
+    <section class="contact-section">
+        <h1>Get in Touch</h1>
+        <p class="contact-subtitle">We would love to hear your feedback or answer any questions!</p>
+        
+        <div class="contact-container">
+            <!-- contact info panel -->
+            <div class="contact-info-box">
+                <h2>Visit Us</h2>
+                <p>📍 Ruoholahdenkatu 12, Helsinki, Finland</p>
+                <p>🕒 Mon - Sat: 07:00 - 19:00</p>
+                <p>📞 Phone: +358 40 123 4567</p>
+                <p>📧 Email: info@butterandbloom.fi</p>
+            </div>
+
+            <!-- interactive feedback form -->
+            <form class="feedback-form" onsubmit="handleFormSubmit(event)">
+                <h3>Send Us Feedback</h3>
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" placeholder="Erva Mercan" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" placeholder="ervamercan@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" placeholder="Feedback / Message" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="4" placeholder="Write your message or feedback here..." required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Send Message</button>
+            </form>
+        </div>
+
+        <!-- OpenStreetMap -->
+        <div class="map-container">
+            <iframe 
+                class="map-iframe"
+                src="https://www.openstreetmap.org/export/embed.html?bbox=24.9150%2C60.1600%2C24.9350%2C60.1700&amp;layer=mapnik&amp;marker=60.1650%2C24.9250">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer></footer>
+
+    <!-- scripts -->
+    <script>
+        function toggleMusic() {
+            var music = document.getElementById("bakeryMusic");
+            var btn = document.querySelector(".music-btn");
+            if (music.paused) { 
+                music.play(); 
+                btn.innerHTML = "⏸️ Pause Music"; 
+            } else { 
+                music.pause(); 
+                btn.innerHTML = "🎵 Play Music"; 
+            }
+        }
+
+        /* Interactive feedback form handler */
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            alert("Thank you for your feedback! We have received your message.");
+            event.target.reset();
+        }
+    </script>
+</body>
+</html>

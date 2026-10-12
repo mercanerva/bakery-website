@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Butter & Bloom Bakery - About Us</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <!-- background audio -->
+    <audio id="bakeryMusic" loop>
+        <source src="../gallery/bakery-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- header & navigation -->
+    <header class="navbar">
+        <a href="../home/home.html" class="logo">
+            <!-- SVG Logo -->
+            <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="45" fill="#C86D51" />
+                <text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="'Playfair Display', serif" font-size="38" font-weight="bold" fill="#FDFBF7">BB</text>
+            </svg>
+            Butter & Bloom Bakery
+        </a>
+        <nav>
+            <ul>
+                <li><a href="../home/home.html">Home</a></li>
+                <li><a href="../menu/menu.html">Menu</a></li>
+                <li><a href="../aboutus/aboutus.html">About Us</a></li>
+                <li><a href="../contact/contact.html">Contact</a></li>
+                <li><a href="../myreport/myreport.html">My Report</a></li>
+            </ul>
+        </nav>
+        <button class="music-btn" onclick="toggleMusic()">🎵 Play Music</button>
+    </header>
+
+    <!-- about us section -->
+   <section class="about-section">
+        <div class="about-story">
+            <h1>Our Story</h1>
+            <p>Welcome to Butter and Bloom Bakery! With a love of baking in the heart of Helsinki, we create handmade, organic baked goods using traditional fermentation techniques and local Nordic ingredients.</p>
+            <p>At our bakery, we are proud of the `Daily` freshness of all our products. You will find that all our products are baked as early as possible every single morning, from sourdough loaves to croissants, all to warm up your day and make every coffee break a delightful moment.</p>
+        </div>
+
+        <div class="why-us">
+            <h2>Our Core Values</h2>
+            <div class="feature-grid">
+                <div class="feature-box">
+                    <span class="icon">🌾</span>
+                    <h3>100% Organic Flour</h3>
+                    <p>Made with local organic flour and freshly baked products every day.</p>
+                </div>
+                <div class="feature-box">
+                    <span class="icon">☕</span>
+                    <h3>Fresh Roasted Coffee</h3>
+                    <p>Brewed daily with beans sourced from local roasters.</p>
+                </div>
+                <div class="feature-box">
+                    <span class="icon">🚚</span>
+                    <h3>Eco Delivery</h3>
+                    <p>Warm pastries delivered quickly with minimal environmental impact.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer></footer>
+
+    <!-- background audio toggle script -->
+    <script>
+        function toggleMusic() {
+            var music = document.getElementById("bakeryMusic");
+            var btn = document.querySelector(".music-btn");
+            if (music.paused) { 
+                music.play(); 
+                btn.innerHTML = "⏸️ Pause Music"; 
+            } else { 
+                music.pause(); 
+                btn.innerHTML = "🎵 Play Music"; 
+            }
+        }
+    </script>
+</body>
+</html>

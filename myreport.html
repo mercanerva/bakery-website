@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Butter & Bloom Bakery - Project Report</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <!-- background audio -->
+    <audio id="bakeryMusic" loop>
+        <source src="../gallery/bakery-music.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- header & navigation -->
+    <header class="navbar">
+        <a href="../home/home.html" class="logo">
+            <!-- SVG Logo -->
+            <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="45" fill="#C86D51" />
+                <text x="50%" y="58%" dominant-baseline="middle" text-anchor="middle" font-family="'Playfair Display', serif" font-size="38" font-weight="bold" fill="#FDFBF7">BB</text>
+            </svg>
+            Butter & Bloom Bakery
+        </a>
+        <nav>
+            <ul>
+                <li><a href="../home/home.html">Home</a></li>
+                <li><a href="../menu/menu.html">Menu</a></li>
+                <li><a href="../aboutus/aboutus.html">About Us</a></li>
+                <li><a href="../contact/contact.html">Contact</a></li>
+                <li><a href="../myreport/myreport.html">My Report</a></li>
+            </ul>
+        </nav>
+        <button class="music-btn" onclick="toggleMusic()">🎵 Play Music</button>
+    </header>
+
+    <!-- documentation & report section -->
+    <section class="report-section">
+        <h1>Project Documentation & Report</h1>
+        <div class="report-content">
+            
+            <h2>1. Overview & Time Spent</h2>
+            <p>Creating this website was a learning experience that helped me move from initial ideas in wireframes to a working responsive web application! :) The whole project took me about 25 to 30 hours. I spent my time planning making prototypes in Figma building the HTML adding styles with CSS and testing how to layout looks on screen sizes.</p>
+
+            <h2>2. Problem Solving & Challenges</h2>
+            <p>What was hard? Well, the whole project was so hard for me because I don´t have any coding background, I need to investigate about everything. I watch so many videos and our lectures again and again and I guess I can do a lot of things now! :) The biggest challenge for me was keeping the layout consistent on devices. I had to work a lot with Flexbox and Grid to make sure elements didn´t overlap. It took a lot of trying and fixing.</p>
+            <p>What was simple and fun? Putting together the HTML structure was super easy. The fun part was writing custom CSS and watching the designs I made in Figma show up exactly as I wanted on the browser.</p>
+
+            <h2>3. Key Learnings & Course Reflection</h2>
+            <p>During this course I learned a lot about front-end practices. I worked with HTML5 organized CSS planned design components.</p>
+            <p>Course Feedback: I really liked the way the course was structured. Working on a project helped me understand the ideas better. For the time adding a short lesson on advanced CSS animations would be a great idea!</p>
+
+            <h2>4. Design</h2>
+            <p>I worked hard to make the layout simple and easy to use. I choose a color scheme and made sure the text was easy to read. Things I want to point out for attention include using proper HTML5 tags for structure and accessibility making sure the layout works well on the all devices without using big outside CSS tools and keeping the code neat and organized.</p>
+
+            <h2>5. Conclusion</h2>
+            <p>The lectures and the project was quite fun! It helped me get better at building web pages from the ground up. Made me more confident, in my front-end skills.</p>
+
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer></footer>
+
+    <!-- audio toggle script -->
+    <script>
+        function toggleMusic() {
+            var music = document.getElementById("bakeryMusic");
+            var btn = document.querySelector(".music-btn");
+            if (music.paused) { 
+                music.play(); 
+                btn.innerHTML = "⏸️ Pause Music"; 
+            } else { 
+                music.pause(); 
+                btn.innerHTML = "🎵 Play Music"; 
+            }
+        }
+    </script>
+</body>
+</html>
